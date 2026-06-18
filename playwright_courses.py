@@ -29,3 +29,13 @@ with sync_playwright() as plawright:
     page = context.new_page()
 
     page.goto('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login')
+
+    #Проверка наличия и текста заголовка "Courses" 
+
+
+
+
+    #наличие и текст блока "There is no results"
+
+    #наличие и видимость иконки пустого блока
+    #наличие и текст описания блока: "Results from the load test pipeline will be displayed here"
