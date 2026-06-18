@@ -9,15 +9,15 @@ with sync_playwright() as playwright:
     expect(registration_button).to_be_disabled()
 
      #Заполняем поле почты
-    email_input = page.get_by_test_id('registration-form-email-input')
+    email_input = page.get_by_test_id('registration-form-email-input').locator('input')
     email_input.fill("user.name@gmail.com")
 
     #Заполняем поле имя пользователя
-    username_input = page.get_by_test_id('registration-form-username-input')
+    username_input = page.get_by_test_id('registration-form-username-input').locator('input')
     username_input.fill('username')
 
     #Заполняем поле пароль
-    password_input = page.get_by_test_id('registration-form-password-input')
+    password_input = page.get_by_test_id('registration-form-password-input').locator('input')
     password_input.fill('password')
 
 
