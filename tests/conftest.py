@@ -1,6 +1,8 @@
 import pytest
 from playwright.sync_api import sync_playwright, Page
 
+from pages.login_page import LoginPage
+
 
 @pytest.fixture
 def chromium_page() -> Page:
@@ -58,3 +60,8 @@ def chromium_page_with_state(initialize_browser_state) -> Page:
         # Закрываем контекст и браузер после завершения теста
         context.close()
         browser.close()
+
+
+@pytest.fixture
+def login_page(chromium_page:Page) -> LoginPage:
+    return LoginPage(page=chromium_page)
